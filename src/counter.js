@@ -35,3 +35,21 @@ document.getElementById('toggle').addEventListener('change', function () {
     document.documentElement.classList.remove('dark')
   }
 })
+
+
+// remove menuslider once a button is click
+
+const clickLink = document.querySelectorAll('.click'); 
+
+
+function removeMenu() {
+  menuList.classList.add('hidden');
+  btn.classList.remove('open')
+}
+
+
+clickLink.forEach((link) => {
+  link.addEventListener('click', () => {
+    removeMenu(); 
+  });
+});
