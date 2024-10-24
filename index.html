@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+
+    <link rel="stylesheet" href="src/style.css">
+    <script src="src/main.js" type="module" defer></script>
+    <title>Femi's Portfolio</title>
+  </head>
+  <body class="dark:bg-black dark:text-white">
+  <!-- Hero Section -->
+   <section id="hero" class="p-4 dark:bg-dark dark:text-white">
+   <nav class="flex flex-1 items-center justify-between dark:bg-dark dark:text-white">
+       <!-- Images -->
+       <div>
+      <img src="./public/image/new-logo.svg" alt="" class="w-32 md:mt-5 ">
+      </div>
+      <!-- nav list --> 
+       <div class="hidden md:flex md:flex-row space-x-6 px-2  font-sans text-secondary items-end">
+        <!-- list 1 -->
+         <div class="group uppercase">
+          <a href="/">HOME</a>
+          <div class="border-2 mx-auto border-primary opacity-0 group-hover:opacity-100"></div>
+         </div>
+        <!-- list 1 -->
+         <div class="group uppercase">
+          <a href="#tech-stack">TECH STACK</a>
+          <div class="border-2 mx-auto border-primary opacity-0 group-hover:opacity-100"></div>
+         </div>
+        <!-- list 1 -->
+         <div class="group uppercase">
+          <a href="#projects">PROJECTS</a>
+          <div class="border-2 mx-auto border-primary opacity-0 group-hover:opacity-100"></div>
+         </div>
+        <!-- list 1 -->
+         <div class="group uppercase">
+          <a href="#contact">CONTACTS</a>
+          <div class="border-2 mx-auto border-primary opacity-0 group-hover:opacity-100"></div>
+         </div>
+          <!-- Download resume -->
+        <button class="py-2 px-4 text-white bg-primary hover:bg-white border hover:border-primary hover:text-primary rounded-lg">
+          <a href="https://facebook.com">Resume</a>
+        </button>
+        <!-- light -->
+        <div class="relative inline-block w-10 mr-2 ml-6 mt-6 align-middle select-none transition duration-200 ease-in">
+          <!-- Checkbox input -->
+          <input
+            type="checkbox"
+            name="toggle"
+            id="toggle"
+            class="toggle-checkbox hidden"
+            aria-label="Toggle Dark Mode"
+          />
+        
+          <!-- Label (Switch) -->
+          <label for="toggle" class="flex items-center justify-between rounded-full cursor-pointer px-1">
+            <!-- Sun Icon (Light Mode) -->
+            <i class="fas fa-sun text-yellow-500 text-2xl dark:hidden"></i>
+        
+            <!-- Moon Icon (Dark Mode) -->
+            <i class="fas fa-moon text-gray-300 text-2xl hidden dark:block"></i>
+          </label>
+        </div>
+      <!--  -->
+         
+       </div>
+       <!-- Smaller Screen -->
+      <div class="flex items-center space-x-4 justify-center md:hidden">   
+          <!-- light -->
+        <div class="items-center inline-block w-10 align-middle select-none transition duration-200 ease-in">
+          <!-- Checkbox input -->
+          <input
+            type="checkbox"
+            name="toggle"
+            id="toggle"
+            class="toggle-checkbox hidden"
+            aria-label="Toggle Dark Mode"
+          />
+        
+          <!-- Label (Switch) -->
+          <label for="toggle" class="flex items-center justify-between rounded-full cursor-pointer px-1">
+            <!-- Sun Icon (Light Mode) -->
+            <i class="fas fa-sun text-yellow-500 text-2xl dark:hidden"></i>
+        
+            <!-- Moon Icon (Dark Mode) -->
+            <i class="fas fa-moon text-gray-300 text-2xl hidden dark:block"></i>
+          </label>
+        </div>
+           <!-- @todo Mobile Menu -->
+           <button
+           id="menu-btn"
+           class="block hamburger lg:hidden focus:outline-none"
+           type="button"
+         >
+           <span class="hamburger-top"></span>
+           <span class="hamburger-middle"></span>
+           <span class="hamburger-bottom"></span>
+         </button>
+       </div>
+      </div>
+    </nav>  
+    <!-- Menu Items -->
+    <div
+    id="menu"
+    class="absolute hidden p-6 rounded-lg bg-primary left-6 right-6 top-20 z-100 duration-300 md:hidden"
+  >
+    <!-- My Lists -->
+    <div class="flex flex-col space-y-12 px-2  font-sans text-white items-center">
+     <!-- list 1 -->
+     <div class="group uppercase">
+      <a href="/">HOME</a>
+      <div class="border-2 mx-auto border-primary opacity-0 group-hover:opacity-100"></div>
+     </div>
+    <!-- list 1 -->
+     <div class="group uppercase">
+      <a href="#tech-stack">TECH STACK</a>
+      <div class="border-2 mx-auto border-primary opacity-0 group-hover:opacity-100"></div>
+     </div>
+    <!-- list 1 -->
+     <div class="group uppercase">
+      <a href="#projects">PROJECTS</a>
+      <div class="border-2 mx-auto border-primary opacity-0 group-hover:opacity-100"></div>
+     </div>
+    <!-- list 1 -->
+     <div class="group uppercase">
+      <a href="#contact">CONTACTS</a>
+      <div class="border-2 mx-auto border-primary opacity-0 group-hover:opacity-100"></div>
+     </div>
+     <button class="py-2 px-4 w-[50%] text-primary bg-white hover:bg-primary border hover:border-white hover:shadow-2xl hover:text-white rounded-lg">
+      <a href="https://facebook.com">Resume</a>
+    </button>
+       
+     </div>
+
+  </div>
+   </section>
+   <!-- Aside Content -->
+   <section id="aside-content">
+    <aside class="fixed top-40 transform translate-y-1/2 left-4 sm:p-2 md:p-3  border-dotted border-2 border-primary rounded-md dark:bg-white">
+      <div class="flex flex-col space-y-6 items-center">
+        <div class="group ">
+          <a href="https://github.com/dashboard"><img src="./public/image/github.png" alt="" class="sm:w-6 md:w-8 ficon"></a>
+        </div>
+        <div class="group ">
+          <a href="https://x.com/femiklever"><img src="./public/image/iconmonstr-twitter-4.svg" alt="" class="sm:w-6 md:w-8 ficon"></a>
+        </div>
+        <div class="group ">
+          <a href="mailto:femiklever@gmail.com"><img src="./public/image/iconmonstr-email-11.svg" alt="" class="sm:w-6 md:w-8 ficon"></a>
+        </div>
+        <div class="group ">
+          <a href="https://www.linkedin.com/in/oluwafemi-adeleke-914058220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img src="./public/image/iconmonstr-linkedin-4.svg" alt="" class="sm:w-6 md:w-8 ficon"></a>
+        </div>
+      </div>
+    </aside>
+   </section>
+
+   <!-- About Me -->
+  <section id="about" class="container max-w-6xl mx-auto p-6 lg:px-28 mt-28 mb-16">
+    <div class="flex flex-col space-y-4 text-center md:space-y-6 lg:flex-row  lg:space-y-0 lg:space-x-8">
+      <div class="flex flex-col space-y-8 lg:justify-center">
+        <h1 class="text-center text-2xl tracking-wide  text-primary font-sans font-bold lg:text-left lg:text-3xl">
+          Hello there, I'm Femi Klever
+        </h1>
+        <p class="text-center sm:text-sm md:text-lg max-w-xl mx-auto text-secondary lg:text-left lg:text-xl lg:mx-0 font-alata">
+          I'm a front-end developer with a passion for crafting visually appealing and highly functional user interfaces. I love working on projects that focus on creating smooth and engaging user interactions. My goal is to bring designs to life, ensuring a seamless and enjoyable experience for every user.
+        </p>
+        <!-- Button for check my work -->
+         <button class="mx-auto lg:block border py-2 px-6 bg-primary text-white hover:border-primary hover:bg-white hover:text-primary transform hover:-translate-y-1 duration-200 rounded-md lg:w-80">Check Out My Work!</button>
+      </div>
+      
+      <!-- Images -->
+       <div class="sm:hidden w-1/2 md:block md:mx-auto">
+        <img src="./public/image/3f707a3f-bff2-4dcb-ae46-7a8b1519dfff.svg" class="w-full rounded-lg ml-12" alt="">
+       </div>
+    </div>
+  </section>
+
+  <!-- My Work -->
+  
+  <section id="tech-stack">
+    <div class="container max-w-6xl mx-auto mb-16 p-6 lg:p-10 space-y-4">
+      <h2 class="text-center text-primary font-sans font-bold text-3xl lg:text-4xl">
+        My Tech Stack
+      </h2>
+      <p class="text-lg font-light text-center mx-auto max-w-sm font-alata lg:text-xl">
+        Technologies I work with
+      </p>
+      <!-- Items of Technology -->
+       <div class="grid grid-cols-3 gap-4 md:grid-cols-4 lg:grid-cols-6 p-4">
+        <!-- Items 1 -->
+        <div class="group py-4 rounded-lg bg-white flex flex-col items-center space-y-4 hover:scale-105 sm:w-28 md:w-36">
+          <img src="./public/image/html.png" class="w-16" alt="">
+         <div class="text-md font-alata font-bold text-center uppercase text-primary">html</div>
+          </div>
+          <!-- Item 2 -->
+        <div class="group p-4 rounded-lg bg-white flex items-center flex-col space-y-4 hover:scale-105 sm:w-28 md:w-36">
+        <img src="./public/image/css-3.png" class="w-14" alt="">
+       <div class="text-md font-alata font-bold text-center uppercase text-primary">Css</div>
+        </div>
+        <!-- Item 3 -->
+        <div class="group p-4 px-6 rounded-lg bg-white flex items-center flex-col space-y-4 hover:scale-105 sm:w-28 md:w-36">
+        <img src="./public/image/js.png" class="w-16 mx-automd:w-28" alt="">
+       <div class="text-md font-alatafont-thin text-center uppercase text-primary">Javascript</div>
+        </div>
+        <!-- Item 4 -->
+        <div class="group p-4 rounded-lg bg-white flex flex-col items-center space-y-4 hover:scale-105 sm:w-28 md:w-36">
+        <img src="./public/image/physics.png" class="w-16" alt="">
+       <div class="text-md font-alatafont-thin text-center uppercase text-primary">React</div>
+        </div>
+        <!-- Item 5 -->
+        <div class="group p-4 rounded-lg bg-white flex flex-col items-center space-y-4 hover:scale-105 sm:w-28 md:w-36">
+        <img src="./public/image/sass.png" class="w-16" alt="">
+       <div class="text-md font-alatafont-thin text-center uppercase text-primary">Sass</div>
+        </div>
+        <!-- Item 5 -->
+        <div class="group p-4 rounded-lg bg-white flex flex-col space-y-4 hover:scale-105 sm:w-28 md:w-36">
+        <img src="./public/image/social.png" class="w-16" alt="">
+       <div class="text-md font-alatafont-thin text-center uppercase text-primary">Git</div>
+        </div>
+       </div>
+      
+    </div>
+  </section>
+  
+  <!-- Projects -->
+
+  <section id="projects">
+    <div class="container max-w-6xl mx-auto mb-16 p-6 lg:p-10 space-y-4">
+      <h2 class="text-center text-primary font-sans font-bold text-3xl lg:text-4xl">
+        Projects
+      </h2>
+      <p class="text-lg font-light text-center mx-auto max-w-sm font-alata lg:text-xl">
+        Some of my works
+      </p>
+      <!-- My works -->
+
+      <div class="grid grid-cols-0 md:grid-cols-2 lg:grid-cols-3 gap-3 my-12">
+        <!-- First link -->
+         <div class="group space-y-5 bg-zinc-900 mx-auto rounded-2xl shadow-lg">
+          <img src="./public/image/shopping-list.svg" alt="" class="w-full rounded-lg hover:scale-110 duration-200">
+          <h2 class="ml-4 text-left text-base text-white md:text-2xl font-sans font-bold">Shopping list project</h2>
+          <p class=" ml-4 text-sm text-left font-alata text-secondary">
+            It allows users to manage their shopping items efficiently. Users can easily add new items, update existing ones, and remove items from the list, also have the ability to filter items, making it simple to search for and find specific items.
+          </p>
+          <!-- Tech Stack -->
+           <h2 class="ml-4 text-left text-base font-sans text-white">
+            <span class="font-bold">Tech Stack:</span> Css, JavaScript
+           </h2>
+          <!-- Flex for github links and live links -->
+           <div class="ml-1 flex flex-row items-center justify-between space-x-4 pb-8 ">
+            <!-- Live Link -->
+             <div class=" flex flex-row items-center space-x-2 ml-4 text-white">
+              <a href="https://shopping-list-vite.vercel.app/"><img src="./public/image/link.png" class="w-8 items-start rounded-full bg-white p-2 hover:scale-105" alt=""></a>
+              <a href="https://shopping-list-vite.vercel.app/" class="max-w-md font-sans text-sm  border-b border-white  hover:text-primary hover:border hover:border-primary hover:p-2 hover:bg-white">Live Preview</a>
+             </div>
+            <!-- Github Link -->
+             <div class=" flex flex-row items-center space-x-4 mr-5 pr-6 text-white">
+              <a href="https://github.com/Femmyklever/shopping-list-project-js"><img src="./public/image/github.png" class="w-8 items-start rounded-full bg-black" alt=""></a>
+              <a href="https://github.com/Femmyklever/shopping-list-project-js" class="max-w-sm font-sans text-sm  border-b border-white hover:text-primary hover:border hover:border-primary hover:p-2 hover:bg-white">View Code</a>
+             </div>
+           </div>
+         </div>
+        <!-- Second link -->
+         <div class="group space-y-5 bg-zinc-900 mx-auto rounded-2xl shadow-lg">
+          <img src="./public/image/tracaloriesvg.svg" alt="" class="w-full rounded-lg hover:scale-110 duration-200">
+          <h2 class="ml-4 text-left text-base text-white md:text-2xl font-sans font-bold">Tracalorie Project</h2>
+          <p class=" ml-4 text-sm text-left font-alata text-secondary">
+            It help users manage their daily caloric intake and workout and enables users to log meals, track workouts, and calculate net calorie burn throughout the day, Users can set a daily calorie limit, and the app will automatically compute how close they are to that limit by subtracting calories burned during workouts from the calories consumed through meals and is build using Built using OOP concepts. 
+          </p>
+          <!-- Tech Stack -->
+           <h2 class="ml-4 text-left text-base font-sans text-white">
+            <span class="font-bold">Tech Stack:</span> Webpack, Bootstrap and JavaScript
+           </h2>
+          <!-- Flex for github links and live links -->
+           <div class="ml-1 flex flex-row items-center justify-between space-x-4 pb-8 ">
+            <!-- Live Link -->
+             <div class=" flex flex-row items-center space-x-2 ml-4 text-white">
+              <a href="https://voluble-alfajores-1cb623.netlify.app/"><img src="./public/image/link.png" class="w-8 items-start rounded-full bg-white p-2 hover:scale-105" alt=""></a>
+              <a href="https://voluble-alfajores-1cb623.netlify.app/" class="max-w-md font-sans text-sm  border-b border-white  hover:text-primary hover:border hover:border-primary hover:p-2 hover:bg-white">Live Preview</a>
+             </div>
+            <!-- Github Link -->
+             <div class=" flex flex-row items-center space-x-4 mr-5 pr-6 text-white">
+              <a href="https://github.com/Femmyklever/trackcalorie-webpack"><img src="./public/image/github.png" class="w-8 items-start rounded-full bg-black" alt=""></a>
+              <a href="https://github.com/Femmyklever/trackcalorie-webpack" class="max-w-sm font-sans text-sm  border-b border-white hover:text-primary hover:border hover:border-primary hover:p-2 hover:bg-white">View Code</a>
+             </div>
+           </div>
+         </div>
+        <!-- Third link -->
+         <div class="group space-y-5 bg-zinc-900 mx-auto rounded-2xl shadow-lg">
+          <img src="./public/image/Leno.png" alt="" class="w-full rounded-lg hover:scale-110 duration-200">
+          <h2 class="ml-4 text-left text-base text-white md:text-2xl font-sans font-bold">Leno Website</h2>
+          <p class=" ml-4 text-sm text-left font-alata text-secondary">
+            It is  informational site focused on productivity. I used a CSS technique called BEM (Block Element Modifier), which helps organize and name classes in a clear way. The site layout is created using CSS Grid and Flexbox for a responsive design. I also added some animations, and when you click a button, JavaScript opens a modal to play a video.he design was inspired by a UI design I found online, which I adapted for this project.
+          </p>
+          <!-- Tech Stack -->
+           <h2 class="ml-4 text-left text-base font-sans text-white">
+            <span class="font-bold">Tech Stack:</span> Css, JavaScript
+           </h2>
+          <!-- Flex for github links and live links -->
+           <div class="ml-1 flex flex-row items-center justify-between space-x-4 pb-8 ">
+            <!-- Live Link -->
+             <div class=" flex flex-row items-center space-x-2 ml-4 text-white">
+              <a href="https://leno-website-cyan.vercel.app/"><img src="./public/image/link.png" class="w-8 items-start rounded-full bg-white p-2 hover:scale-105" alt=""></a>
+              <a href="https://leno-website-cyan.vercel.app/" class="max-w-md font-sans text-sm  border-b border-white  hover:text-primary hover:border hover:border-primary hover:p-2 hover:bg-white">Live Preview</a>
+             </div>
+            <!-- Github Link -->
+             <div class=" flex flex-row items-center space-x-4 mr-5 pr-6 text-white">
+              <a href="https://github.com/Femmyklever/leno_website"><img src="./public/image/github.png" class="w-8 items-start rounded-full bg-black" alt=""></a>
+              <a href="https://github.com/Femmyklever/leno_website" class="max-w-sm font-sans text-sm  border-b border-white hover:text-primary hover:border hover:border-primary hover:p-2 hover:bg-white">View Code</a>
+             </div>
+           </div>
+         </div>
+        <!-- Forth link -->
+         <div class="group space-y-5 bg-zinc-900 mx-auto rounded-2xl shadow-lg">
+          <img src="./public/image/shortly.png" alt="" class="w-full rounded-lg hover:scale-110 duration-200">
+          <h2 class="ml-4 text-left text-base text-white md:text-2xl font-sans font-bold">Shortly Website</h2>
+          <p class=" ml-4 text-sm text-left font-alata text-secondary">
+            It is a website that creates short links. When you enter a URL, it will display a success message if the URL is correct. If the URL is incorrect, a JavaScript function will show a message asking you to enter a valid link. The user interface is built using a bit of JavaScript and Tailwind CSS, inspired by an online design that you created.
+          </p>
+          <!-- Tech Stack -->
+           <h2 class="ml-4 text-left text-base font-sans text-white">
+            <span class="font-bold">Tech Stack:</span> Tailwind, JavaScript
+           </h2>
+          <!-- Flex for github links and live links -->
+           <div class="ml-1 flex flex-row items-center justify-between space-x-4 pb-8 ">
+            <!-- Live Link -->
+             <div class=" flex flex-row items-center space-x-2 ml-4 text-white">
+              <a href="https://shortly-x8dp.vercel.app/"><img src="./public/image/link.png" class="w-8 items-start rounded-full bg-white p-2 hover:scale-105" alt=""></a>
+              <a href="https://shortly-x8dp.vercel.app/" class="max-w-md font-sans text-sm  border-b border-white  hover:text-primary hover:border hover:border-primary hover:p-2 hover:bg-white">Live Preview</a>
+             </div>
+            <!-- Github Link -->
+             <div class=" flex flex-row items-center space-x-4 mr-5 pr-6 text-white">
+              <a href="https://github.com/Femmyklever/shortly"><img src="./public/image/github.png" class="w-8 items-start rounded-full bg-black" alt=""></a>
+              <a href="https://github.com/Femmyklever/shortly" class="max-w-sm font-sans text-sm  border-b border-white hover:text-primary hover:border hover:border-primary hover:p-2 hover:bg-white">View Code</a>
+             </div>
+           </div>
+         </div>
+        <!-- Fifth link -->
+         <div class="group space-y-5 bg-zinc-900 mx-auto rounded-2xl shadow-lg">
+          <img src="./public/image/form-validator.png" alt="" class="w-full rounded-lg hover:scale-110 duration-200">
+          <h2 class="ml-4 text-left text-base text-white md:text-2xl font-sans font-bold">Form Validator</h2>
+          <p class=" ml-4 text-sm text-left font-alata text-secondary">
+            It is a client-side project created with HTML and CSS, focusing on JavaScript. It checks if fields are required, ensures the username has the correct length, verifies that the email is valid, and confirms that the password matches the confirmation password
+          </p>
+          <!-- Tech Stack -->
+           <h2 class="ml-4 text-left text-base font-sans text-white">
+            <span class="font-bold">Tech Stack:</span> Css, JavaScript
+           </h2>
+          <!-- Flex for github links and live links -->
+           <div class="ml-1 flex flex-row items-center justify-between space-x-4 pb-8 ">
+            <!-- Live Link -->
+             <div class=" flex flex-row items-center space-x-2 ml-4 text-white">
+              <a href="https://vite-form-validator-t2qh.vercel.app/"><img src="./public/image/link.png" class="w-8 items-start rounded-full bg-white p-2 hover:scale-105" alt=""></a>
+              <a href="https://vite-form-validator-t2qh.vercel.app/" class="max-w-md font-sans text-sm  border-b border-white  hover:text-primary hover:border hover:border-primary hover:p-2 hover:bg-white">Live Preview</a>
+             </div>
+            <!-- Github Link -->
+             <div class=" flex flex-row items-center space-x-4 mr-5 pr-6 text-white">
+              <a href="https://github.com/Femmyklever/vite-form-validator"><img src="./public/image/github.png" class="w-8 items-start rounded-full bg-black" alt=""></a>
+              <a href="https://github.com/Femmyklever/vite-form-validator" class="max-w-sm font-sans text-sm  border-b border-white hover:text-primary hover:border hover:border-primary hover:p-2 hover:bg-white">View Code</a>
+             </div>
+           </div>
+         </div>
+        <!-- Sixth link -->
+         <div class="group space-y-5 bg-zinc-900 mx-auto rounded-2xl shadow-lg">
+          <img src="./public/image/flix-app.png" alt="" class="w-full rounded-lg hover:scale-110 duration-200">
+          <h2 class="ml-4 text-left text-base text-white md:text-2xl font-sans font-bold">Flix Movie App</h2>
+          <p class=" ml-4 text-sm text-left font-alata text-secondary">
+            The Flix App Movie is a Netflix-style layout for displaying movies and shows, using a public movie database API with no request limits. It provides various endpoints for accessing different types of information, indicating which query strings are required or optional. The app also uses Swiper JS to create a sliding effect for the content, allowing users to swipe through it easily, and includes pagination for navigation.
+          </p>
+          <!-- Tech Stack -->
+           <h2 class="ml-4 text-left text-base font-sans text-white">
+            <span class="font-bold">Tech Stack:</span> Css, JavaScript
+           </h2>
+          <!-- Flex for github links and live links -->
+           <div class="ml-1 flex flex-row items-center justify-between space-x-4 pb-8 ">
+            <!-- Live Link -->
+             <div class=" flex flex-row items-center space-x-2 ml-4 text-white">
+              <a href="https://flixx-app-nine.vercel.app/"><img src="./public/image/link.png" class="w-8 items-start rounded-full bg-white p-2 hover:scale-105" alt=""></a>
+              <a href="https://flixx-app-nine.vercel.app/" class="max-w-md font-sans text-sm  border-b border-white  hover:text-primary hover:border hover:border-primary hover:p-2 hover:bg-white">Live Preview</a>
+             </div>
+            <!-- Github Link -->
+             <div class=" flex flex-row items-center space-x-4 mr-5 pr-6 text-white">
+              <a href="https://github.com/Femmyklever/flixx-app"><img src="./public/image/github.png" class="w-8 items-start rounded-full bg-black" alt=""></a>
+              <a href="https://github.com/Femmyklever/flixx-app" class="max-w-sm font-sans text-sm  border-b border-white hover:text-primary hover:border hover:border-primary hover:p-2 hover:bg-white">View Code</a>
+             </div>
+           </div>
+         </div>
+         </div>
+         <!-- For More Projects -->
+         <div class="text-center md:text-left font-sans mt-14 ">
+          <div class="flex flex-row items-center space-x-4">
+            <span class="text-sm md:text-xl">Explore more of my work on GitHub: </span>
+            <button class="bg-zinc-900 text-white p-3 md:px-8 text-center rounded-lg shadow-xl w-32 md:w-56 hover:bg-white hover:text-primary hover:border-2 hover:border-primary duration-200 translate-y-0.5"><a href="https://github.com/dashboard">Github link</a></button>
+          </div>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact">
+    <div class="container max-w-6xl mx-auto mb-20 p-6 lg:p-10 space-y-4">
+      <!-- Flex items -->
+      <div class="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-8">
+        <!-- First Content -->
+        <div class="w-full md:w-[50%]">
+          <h2 class="text-left text-3xl font-sans font-bold text-slate-900 tracking-wide md:text-4xl mb-8 md:max-w-md md:mt-28">
+            Let's Work Together
+          </h2>
+          <p class="text-left text-md font-sans text-secondary md:text-xl md:max-w-sm">
+            I'd love to hear about what you are working on and how I could help
+          </p>
+        </div>
+        <!-- Form Content -->
+        <form id="form" action="https://formspree.io/f/xrbgbrbd" method="POST" class="flex flex-col space-y-6 md:w-[70%]"> 
+          <!-- Name -->
+          <div class="space-y-2 w-full">
+            <label for="name" class="text-left font-sans text-xl md:text-2xl text-secondary w-full">Name:</label>
+            <input type="text" name="name" id="name" class="text-white py-3  w-full bg-zinc-900 border-0 focus:outline-primary focus:bg-gray-200 focus:text-black placeholder:pl-6 placeholder:font-sans placeholder:font-normal placeholder:text-white" placeholder="Full Name">
+          </div>
+          <!-- Name -->
+          <div class="space-y-2 w-full">
+            <label for="Email" class="text-left font-sans text-xl md:text-2xl text-secondary w-full">Email:</label>
+            <input type="email" name="email" id="email" class="text-white py-3 w-full bg-zinc-900 border-0 focus:outline-primary focus:bg-gray-200 focus:text-black placeholder:pl-6 placeholder:font-sans placeholder:font-normal placeholder:text-white" placeholder="Email">
+          </div>
+          <!-- Name -->
+          <div class="space-y-2 w-full">
+            <label for="message" class="text-left font-sans text-xl md:text-2xl text-secondary w-full">Message:</label>
+            <textarea id="message" name="message" class="text-white py-3  w-full bg-zinc-900 border-0 focus:outline-primary focus:bg-gray-200 focus:text-black placeholder:pl-6 placeholder:font-sans placeholder:font-normal placeholder:text-white" placeholder="How can i help you?" rows="6"></textarea>
+          </div>
+          <!-- Button -->
+          <button type="button" class="text-center py-4 px-8 w-full rounded-lg shadow-lg bg-zinc-900 text-white uppercase md:w-[50%] border border-transparent hover:border-primary hover:bg-white hover:text-primary duration-200">
+            Send Message
+          </button>
+          
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+   <footer id="footer" class="bg-zinc-900">
+    <div class="container max-w-6xl mx-auto  p-6 lg:p-10 ">
+      <div class="flex flex-col justify-center items-center space-y-6 md:justify-between md:flex-row md:space-x-16 md:space-y-0">
+        <div class="text-white font-sans items-start uppercase">
+          &copy; 2024 Femi Klever
+        </div>
+        <div class="flex flex-row space-x-8 items-center justify-center">
+          <div class="text-sm md:text-base text-white font-sans">Connect with me:</div>
+          <div class="group flex flex-row text-white space-x-4">
+            <a href="https://github.com/dashboard" class="mx-auto border-b border-white hover:border-primary">Github</a>
+            <a href="https://x.com/femiklever" class="mx-auto border-b border-white hover:border-primary">Twitter</a>
+            <a href="https://www.linkedin.com/in/oluwafemi-adeleke-914058220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="mx-auto border-b border-white hover:border-primary">Linkdeln</a>
+            <a href="mailto:femiklever@gmailcom" class="mx-auto border-b border-white hover:border-primary">Gmail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+   </footer>
+  
+   
+  </body>
+</html>
