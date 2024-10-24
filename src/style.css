@@ -15,12 +15,19 @@ body {
   left: 0; /* Aligns it to the left */
   right: 0; /* Aligns it to the right */
   z-index: 10; /* Ensures it is above other content */
-  height: 90px;
+  height: 80px;
   transition: background-color 0.3s ease;
+  margin-bottom: 2rem;
 }
 
 .bgWhite {
   background-color: white;
+}
+
+#tech-stack,
+#projects,
+#contact {
+  scroll-margin-top: 80px; /* The same height as your hero section */
 }
 
 /* Toggle Btn */
